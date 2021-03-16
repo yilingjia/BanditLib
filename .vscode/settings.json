@@ -1,0 +1,19 @@
+{
+    "cSpell.ignoreWords": [
+        "contextdim",
+        "csgraph",
+        "genfromtxt",
+        "gepsilon",
+        "hiddendim",
+        "kmeans",
+        "kmeansdata",
+        "numel",
+        "reco",
+        "sklearn",
+        "stdev",
+        "struct",
+        "tstart",
+        "ucbpmf"
+    ],
+    "python.pythonPath": "/zf14/yj9xs/anaconda3/envs/py3-bandit/bin/python"
+}

@@ -8,7 +8,7 @@
 
 # System level settings to be used in all algorithms
 general:
-  context_dimension: 25 # (int) The number of features which the algorithm knows about each article
+  context_dimension: 50 # (int) The number of features which the algorithm knows about each article
   hidden_dimension: 0 # (int) The number of features hidden from the algorithms
   pool_article_size: 20 # (int) Number of articles to select from total pool from which the algorithm can choose
   plot: True # (True/False) Should plots be created
@@ -29,32 +29,47 @@ alg:
   # Specific Parameters, setting in this section under an algorithm will overwrite default and 
   #   general parameters for that algorithm
   specific:
-    LinUCB:
-      alpha: 0.3
+    CNeuralPHE:
+      alpha: 0.01
       lambda_: 0.1
+      path: "./Dataset/hetrec2011-lastfm-2k/lastfm_user_emd_25_new"
+      hidden_layers: [100]
+      learning_rate: 0.01
+      learning_rate_decay: 0.95
       parameters:
         Theta: True
         CoTheta: False
         W: False
         V: False
-    LinPHE:
-      a: 1 
-      lambda_: 0.1
-      parameters:
-        Theta: True
-        CoTheta: False
-        W: False
-        V: False
-    ThompsonSampling:
-       lambda_: 0.1
-       R: .0001 
-       delta: .1
-       epsilon: .05
-       parameters:
-         Theta: True
-         CoTheta: False
-         W: False
-         V: False
+    # NeuralPHE:
+    #   alpha: 0.01
+    #   lambda_: 0.1
+    #   parameters:
+    #     hidden_layers: [64]
+    #     learning_rate: 0.01
+    #     learning_rate_decay: 0.9999
+    #     Theta: True
+    #     CoTheta: False
+    #     W: False
+    #     V: False
+    # LinPHE:
+    #   a: 1 
+    #   lambda_: 0.1
+    #   parameters:
+    #     Theta: True
+    #     CoTheta: False
+    #     W: False
+    #     V: False
+    # ThompsonSampling:
+    #    lambda_: 0.1
+    #    R: .0001 
+    #    delta: .1
+    #    epsilon: .05
+    #    parameters:
+    #      Theta: True
+    #      CoTheta: False
+    #      W: False
+    #      V: False
     # CoLinUCB:
     #   alpha: 0.3
     #   lambda_: 0.1

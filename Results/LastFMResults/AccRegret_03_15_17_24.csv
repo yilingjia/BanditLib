@@ -1,0 +1,5 @@
+dimension: 50,n_users: 2100,parameters: {'Theta': True, 'CoTheta': False, 'W': False, 'V': False},alpha: 0.01,lambda_: 0.1,path: ./Dataset/hetrec2011-lastfm-2k/lastfm_user_emd_25_new,hidden_layers: [100],learning_rate: 0.01,learning_rate_decay: 0.96
+Time(Iteration),Random,CNeuralUCB,CNeuralUCB_time
+1000,955,854,37.80634570121765
+2000,1919,1699,111.60180115699768
+3000,2887,2510,294.38462495803833
